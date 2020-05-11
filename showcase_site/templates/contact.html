@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <form class="content-section" action="{{ url_for('contact') }}" method="post">
+
+    {{ form.csrf_token }}
+
+    <!-- Here we let the Jinja2 template engine egenrate the bulk of the form -->
+
+        <li class="list-group-item list-group-item-light" >
+            {{ form.name.label }}
+            {{ form.name }}
+        </li>
+
+        <li class="list-group-item list-group-item-light" >
+            {{ form.email.label }}
+            {{ form.email }}
+        </li>
+
+        <li class="list-group-item list-group-item-light" >
+            {{ form.subject.label }}
+            {{ form.subject }}
+        </li>
+
+        <li class="list-group-item list-group-item-light" >
+            {{ form.message.label }}
+            {{ form.message }}
+        </li>
+
+        <li class="list-group-item list-group-item-light" >
+            {{ form.submit }}
+        </li>
+
+    </form>
+
+{% endblock content %}

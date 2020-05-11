@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+                {% if project.video == "True" %}
+
+                    <video style="align-content: space-around; padding-left: 8px" height="400" muted autoplay loop>
+
+                        <source src="{{ '/' + img_path }}" type="video/mp4" >
+
+                    </video>
+
+                {% else %}
+
+                    <img style="padding-left: 10px; padding-bottom: 50px" height="400" src="{{ '/' + img_path }}" alt="User Image">
+
+                {% endif %}
+
+
+        <article  class="media content-section">
+
+            <div class="media-body">
+
+                <!-- Here we use a url_for with a parameter passed in to get the full article -->
+
+                <h2 style="padding-left: 200px" class="home_header list-group-item-light" >{{ project.title }} </h2>
+
+                <p class="article-content">{{ project.content }}</p>
+
+
+            </div>
+
+        </article>
+
+{% endblock content %}

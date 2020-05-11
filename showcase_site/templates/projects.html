@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    {% for project in posts %}
+
+        <article class="media content-section">
+
+        {% if project.lan == 'Python' %}
+
+            <img class="thumbnail" src="{{ python_img }}">
+
+         {% elif project.lan == 'Android' %}
+
+            <img class="android_thumbnail" src="{{ android_img }}">
+
+         {% elif project.lan == 'HTML5' %}
+
+            <img class="android_thumbnail" src="{{ html_img }}">
+
+         {% endif %}
+
+            <div class="media-body">
+
+                <!-- Here we use a url_for with a parameter passed in to get the full article -->
+                
+                <h2><a class="article-title" href=" {{ url_for('display_project', post_id=project.id) }}">{{ project.title }}</a> </h2>
+                <p class="article-content">{{ project.content | truncate(225)}}</p>
+
+
+            </div>
+
+        </article>
+
+
+    {% endfor %}
+
+{% endblock content %}

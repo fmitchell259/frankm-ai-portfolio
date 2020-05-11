@@ -1,0 +1,117 @@
+<!-- A ever the first thing we need to do is inherit from the layour.html. This gives each page the same layout. -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="content-section">
+
+        <form method="POST" action="">
+
+            {{ form.csrf_token }}
+
+            <fieldset class="form-group">
+
+                    <legend class="border-bottom mb-4">{{ legend }}</legend>
+
+                        <div class="form-group">
+
+                            {{ form.title.label(class="form-control-label") }}
+
+                            {% if form.title.errors %}
+
+                                {{ form.title(class="form-control form-control-lg is-invalid") }}
+
+                                <div class="invalid-feedback">
+
+                                    {% for error in form.title.errors %}
+
+                                        <span> {{ error }} </span>
+
+                                    {% endfor %}
+
+						        </div>
+
+					        {% else %}
+
+						        {{ form.title(class="form-control form-control-lg") }}
+
+					        {% endif %}
+
+
+				        </div>
+
+                        <div class="form-group">
+
+                            {{ form.content.label(class="form-control-label") }}
+
+                            {% if form.content.errors %}
+
+                                {{ form.content(class="form-control form-control-lg is-invalid") }}
+
+                                <div class="invalid-feedback">
+
+                                    {% for error in form.content.errors %}
+
+                                        <span> {{ error }} </span>
+
+
+                                    {% endfor %}
+
+                                </div>
+
+					        {% else %}
+
+						        {{ form.content(class="form-control form-control-lg") }}
+
+					        {% endif %}
+
+
+                        </div>
+
+                        <div class="form-group">
+
+                            {{ form.project_language.label(class="form-control-label") }}
+
+                            {% if form.project_language.errors %}
+
+                                {{ form.project_language(class="form-control form-control-lg is-invalid") }}
+
+                                <div class="invalid-feedback">
+
+                                    {% for error in form.project_language.errors %}
+
+                                        <span> {{ error }} </span>
+
+
+                                    {% endfor %}
+
+                                </div>
+
+					        {% else %}
+
+						        {{ form.project_language(class="form-control form-control-lg") }}
+
+					        {% endif %}
+
+
+                        </div>
+
+            </fieldset>
+
+                <div class="form-group">
+
+				<!-- outline-info is a stylish wee bluey bit thet will put around the button.-->
+
+				{{ form.submit(class="btn btn-outline-info")  }}
+
+
+			    </div>
+
+        </form>
+
+    </div>
+
+
+
+{% endblock content %}

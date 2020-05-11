@@ -1,0 +1,49 @@
+<!--We ONLY have the data that is pertinent to our homepage. The rest is all dealt with using the layout template-->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <body xmlns="http://www.w3.org/1999/html">
+
+        <div class="row">
+
+            <div class="column">
+
+                <img style="padding-left: 170px" height="400" src="{{ about_image }}" alt="User Image">
+
+            </div>
+
+            <!-- <div class="column">
+
+                <img style="padding-left: 100px" height="400" src="{{ mntn_img }}" alt="User Image">
+
+            </div> -->
+
+        </div>
+        
+        <br>
+        
+        <h1 style="padding-left: 240px" class="home_header list-group-item-light " ><ins>Data Scientist.</ins></h1>
+
+        <div style="padding-bottom: 200px" class="about_text" >
+            <br>
+                Detail-oriented Data Scientist with proven ability to deliver complex insights using data analytics and
+                advanced methodologies. Known for a great analytical skillset, strong attention to detail, and significant
+                ability to work in a team environment. Adept with predictive modeling, data processing, and numerous
+                data mining algorithms.<br><br>
+
+                Proven ability to learn new technology and apply newfound skills to a business environment. 
+
+
+            </span>
+
+
+        </div>
+
+
+    </body>
+
+
+{% endblock content %}
+

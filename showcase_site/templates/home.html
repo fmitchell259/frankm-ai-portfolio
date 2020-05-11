@@ -1,0 +1,34 @@
+<!--We ONLY have the data that is pertinent to our homepage. The rest is all dealt with using the layout template-->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <body>
+
+        <video style="align-content: space-around" height="400" muted autoplay loop>
+
+            <source src="{{ home_img }}" type="video/mp4"  >
+
+        </video>
+        
+        <br>
+        <br>
+
+        <h1 style="padding-left: 160px" class="home_header list-group-item-light " ><ins>Frank Mitchell Portfolio.</ins></h1>
+
+        <div class="home_text" >
+            <span>
+                A basic site built using Flask - hosted on a Rasberry Pi - showcasing the
+                work and personal projects of Frank Mitchell.</br> </br>
+                <i>- MSc student of Artificial Intelligence at Strathclyde University, Glasgow.</i>
+            </span>
+
+
+        </div>
+
+
+    </body>
+
+
+{% endblock content %}  

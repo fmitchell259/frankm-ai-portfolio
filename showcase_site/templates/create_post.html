@@ -1,0 +1,88 @@
+<!--We ONLY have the data that is pertinent to our homepage. The rest is all dealt with using the layout template-->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <form class="content-section" action="{{ url_for('new_project') }}" method="post">
+
+    {{ form.csrf_token }}
+
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Create Project Post</legend>
+
+                <div class="form-group">
+
+                    {{ form.lan.label(class='form-control-label') }}
+                    {% if form.lan.errors %}
+                        {{ form.lan(class='form-control form-control-leg is-invalid') }}
+                        <div class="invalid-feedback">
+                            {% for error in form.lan.errors %}
+                                <span>{{ errror }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.lan(class='form-control form-control-lg') }}
+                    {% endif %}
+
+                </div>
+
+                <div class="form-group">
+
+                    {{ form.video.label(class='form-control-label') }}
+                    {% if form.video.errors %}
+                        {{ form.video(class='form-control form-control-leg is-invalid') }}
+                        <div class="invalid-feedback">
+                            {% for error in form.video.errors %}
+                                <span>{{ errror }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.video(class='form-control form-control-lg') }}
+                    {% endif %}
+
+                </div>
+
+                <div class="form-group">
+
+                    {{ form.title.label(class='form-control-label') }}
+                    {% if form.title.errors %}
+                        {{ form.title(class='form-control form-control-leg is-invalid') }}
+                        <div class="invalid-feedback">
+                            {% for error in form.title.errors %}
+                                <span>{{ errror }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.title(class='form-control form-control-lg') }}
+                    {% endif %}
+
+                </div>
+
+                <div class="form-group">
+
+                    {{ form.content.label(class='form-control-label') }}
+                    {% if form.content.errors %}
+                        {{ form.content(class='form-control form-control-leg is-invalid') }}
+                        <div class="invalid-feedback">
+                            {% for error in form.content.errors %}
+                                <span>{{ errror }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.content(class='form-control form-control-lg') }}
+                    {% endif %}
+
+                </div>
+
+                <div class="form-group">
+                    {{ form.submit(class='btn btn-outline-info') }}
+                </div>
+
+        </fieldset>
+
+    </form>
+
+
+
+{% endblock content %}
