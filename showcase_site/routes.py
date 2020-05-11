@@ -64,6 +64,13 @@ def download_cv(doc_name):
     except FileNotFoundError:
         return abort(404)
 
+# TODO: All project links commented out for now, write up a project per
+# day and post it to my site.
+
+# TODO: This allows me to deploy right now and then get the chance to 
+# update. 
+
+# TODO: Projects needs to be updateed. 
 
 @app.route('/projects')
 def projects():
@@ -113,23 +120,23 @@ def display_project(post_id):
 # Below we ave a route that will be made private, for now the user cannot openly link to it.
 
 
-@app.route('/projects/new_post', methods=['GET', 'POST'])
-def new_project():
+# @app.route('/projects/new_post', methods=['GET', 'POST'])
+# def new_project():
 
-    post_form = PostForm()
+#     post_form = PostForm()
 
-    if post_form.validate_on_submit():
-        post = PostProject(lan=post_form.lan.data,
-                            video=post_form.video.data,
-                            title=post_form.title.data,
-                            content=post_form.content.data)
-        data_base.session.add(post)
-        data_base.session.commit()
-        flash("Project Post Created!.", 'success')
-        return redirect(url_for('projects'))
-    else:
-        return render_template('create_post.html',
-                                form=post_form)
+#     if post_form.validate_on_submit():
+#         post = PostProject(lan=post_form.lan.data,
+#                             video=post_form.video.data,
+#                             title=post_form.title.data,
+#                             content=post_form.content.data)
+#         data_base.session.add(post)
+#         data_base.session.commit()
+#         flash("Project Post Created!.", 'success')
+#         return redirect(url_for('projects'))
+#     else:
+#         return render_template('create_post.html',
+#                                 form=post_form)
 
 
 
