@@ -19,9 +19,9 @@
 
 
 	{% if title %}
-	    <title> Frank Mitchell Dev - {{title}} </title>
+	    <title> Frank Mitchell AI - {{title}} </title>
 	{% else %}
-	    <title> Frank Mitchell Dev </title>
+	    <title> Frank Mitchell AI </title>
 	{% endif %}
 
 </head>
@@ -32,7 +32,7 @@
 	<header class="site-header">
 	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 	    <div class="container">
-	      <a class="navbar-brand mr-4" href="/">Frank Mitchell Dev</a>
+	      <a class="navbar-brand mr-4" href="/">Frank Mitchell AI</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
@@ -53,12 +53,15 @@
 
 
                 <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+				<!-- PROJECTS COMMENTED OUT FOR NOW, UNTIL I CAN DO PROPER WRITE UP. 
 
-                <a class="nav-item nav-link " href="{{ url_for('projects') }}">Projects</a>
-                <a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a>
-                <a class="nav-item nav-link navbar-right"  href="https://github.com/fmitchell259/">GitHUB</a>
+				<a class="nav-item nav-link " href="{{ url_for('projects') }}">Projects</a>
+				-->
+
+				<a class="nav-item nav-link navbar-right"  href="https://github.com/fmitchell259/">Github Profile</a>
+				<a class="nav-item nav-link navbar-right"  href="https://www.kaggle.com/fmitchell259">Kaggle Profile</a>
                 <a title="Please click to download C.V." class="nav-ietm nav-link md-4" href="{{ url_for('download_cv', doc_name='frank_mitchell_cv.docx') }}">C.V.</a>
-
+				<a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a>
 
 	        </div>
 	      </div>
@@ -105,10 +108,10 @@
 	        <h3>Personal Projects</h3>
 	        <p class='text-muted'>A list of links to coding projects.
 	          <ul class="list-group">
-	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/NetworkSimulator" >Simulated Network<a/>
-	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/dog_emulator" >Android Tamagotchi<a/>
-	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/geneticAlgorithm.py" >Genetic Algorithm<a/>
-	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/showcase_site"  >FLASK site on Pi<a/>
+	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/Deep_Neural_Net" >Deep Neural Network<a/>
+	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/2048_with_Monte_Carlo" >Monte Carlo Tree Search with 2048<a/>
+	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/COVID19_Clustering" >Feature Engineering using K-means<a/>
+	            <a class="list-group-item list-group-item-light" href="https://github.com/fmitchell259/portoflio_website">Portfolio Website Source Code<a/>
 	          </ul>
 	        </p>
 	      </div>
