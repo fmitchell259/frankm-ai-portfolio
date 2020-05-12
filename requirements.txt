@@ -37,7 +37,7 @@ et-xmlfile==1.0.1
 fastcache==1.0.2
 fastrlock==0.4
 filelock==3.0.10
-Flask==0.12.2
+Flask==1.0
 Flask-Mail==0.9.1
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
