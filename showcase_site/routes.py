@@ -1,17 +1,29 @@
 from showcase_site import app, data_base
 import os
+import flask
 from flask import (render_template, send_from_directory, abort, request,
                    flash, redirect, url_for)
 from showcase_site.forms import ContactForm, PostForm
 from showcase_site.models import PostProject
-from flask_mail import Message, Mail
+from flask import request
+from flask_mail import Message, Mail    
+
 
 mail = Mail()
 
 
+# _render_template = flask.render_template
+
+# def _my_render_template(*args, **kwargs):
+#     if detect_mobile_browser(flask.request.user_agent.string):
+#         args = ('m/' + args[0],) + args[1:]
+#     return _render_template(*args, **kwargs)
+
 @app.route('/')
 @app.route('/home')
 def home():
+
+    device = request.args.get('device')
 
     img_path = os.path.join(app.config['ANIM_FOLDER'], 'home_anim.mp4')
 

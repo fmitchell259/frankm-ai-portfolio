@@ -2,33 +2,33 @@
 
 {% block content %}
 
-    <form class="content-section" action="{{ url_for('contact') }}" method="post">
+    <form class="content-section text-center" action="{{ url_for('contact') }}" method="post" style="padding-bottom: 200px">
 
     {{ form.csrf_token }}
 
     <!-- Here we let the Jinja2 template engine egenrate the bulk of the form -->
 
-        <li class="list-group-item list-group-item-light" >
+        <li class="list-group-item list-group-item-light mx-auto" >
             {{ form.name.label }}
             {{ form.name }}
         </li>
 
-        <li class="list-group-item list-group-item-light" >
+        <li class="list-group-item list-group-item-light mx-auto" >
             {{ form.email.label }}
             {{ form.email }}
         </li>
 
-        <li class="list-group-item list-group-item-light" >
+        <li class="list-group-item list-group-item-light mx-auto " >
             {{ form.subject.label }}
             {{ form.subject }}
         </li>
 
-        <li class="list-group-item list-group-item-light" >
+        <li class="list-group-item list-group-item-light mx-auto" >
             {{ form.message.label }}
             {{ form.message }}
         </li>
 
-        <li class="list-group-item list-group-item-light" >
+        <li class="list-group-item list-group-item-light mx-auto" >
             {{ form.submit }}
         </li>
 

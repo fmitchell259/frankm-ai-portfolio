@@ -1,40 +1,23 @@
 <!--We ONLY have the data that is pertinent to our homepage. The rest is all dealt with using the layout template-->
 
-{% extends "layout.html" %}
+{% extends "layout_m.html" %}
 
 {% block content %}
 
     <body>
 
-        <div class="embed-responsive embed-responsive-16by9">
-            
-            <video muted autoplay loop>
-
-                <source src="{{ home_img }}" type="video/mp4">
-
-            </video>
-
-
-
-
-        </div>
-
-        <!-- 
-
-        <video class="mx-auto" height="400" muted autoplay loop>
+        <video style="align-content: space-around" height="400" muted autoplay loop>
 
             <source src="{{ home_img }}" type="video/mp4"  >
 
         </video>
-        -->
-
-
+        
         <br>
         <br>
 
-        <h2 class="home_header list-group-item-light text-center " ><ins>Frank Mitchell AI Portfolio.</ins></h2>
+        <h2 style="padding-left: 160px" class="home_header list-group-item-light " ><ins>Frank Mitchell AI Portfolio.</ins></h2>
 
-        <div class="home_text text-center" style="padding-bottom: 200px" >
+        <div class="home_text" >
             <span>
                 <i>"It is sometimes a mistake to climb; it is always a mistake never
                     even to make an attempt."
