@@ -61,7 +61,10 @@
 
 				<a class="nav-item nav-link navbar-right"  href="https://github.com/fmitchell259/">Github Profile</a>
 				<a class="nav-item nav-link navbar-right"  href="https://www.kaggle.com/fmitchell259">Kaggle Profile</a>
-                <a title="Please click to download C.V." class="nav-ietm nav-link md-4" href="{{ url_for('download_cv', doc_name='frank_mitchell_cv.docx') }}">C.V.</a>
+				<!--
+				<a title="Please click to download C.V." class="nav-ietm nav-link md-4" href="{{ url_for('download_cv', doc_name=f_mitchell_cv.pdf) }}">C.V.</a>
+				-->
+				<a class="nav-ietm nav-link md-4" href="{{ url_for('download_cv', doc_name=f_mitchell_cv.pdf) }}">Resume</a>
 				<a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a>
 
 	        </div>
